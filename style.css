@@ -1,0 +1,9 @@
+/* Crear un dos input numericos y input submit, 
+con check butons selecionar 
+que tipo de operador 'Comparacion' va usar, enviar los 
+datos por el JS Y resivirlos en el PHP,
+realizar la operacion selecionada y visualizarlo
+en el HTML5 */
+*{
+    background: #c1c1c1;
+}
