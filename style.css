@@ -7,3 +7,21 @@ en el HTML5 */
 *{
     background: #c1c1c1;
 }
+input[type="text"],
+div{
+    display: block;
+}
+input[type="submit"]{
+    margin-top: 5px;
+}
+pre{
+    background: #121212;
+    color: #fff;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+}
+pre::selection{
+    background: #4343437f;
+    color: #fff;
+}

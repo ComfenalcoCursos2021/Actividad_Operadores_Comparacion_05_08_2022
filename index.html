@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Operadores de comparacion</title>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
 </head>
@@ -15,9 +15,37 @@
     datos por el JS Y resivirlos en el PHP,
     realizar la operacion selecionada y visualizarlo
     en el HTML5 -->
-
-    <pre id="res">
-
-    </pre>
+    <form action="https://comfenalcocursos.000webhostapp.com/Actividad_Operadores_Comparacion_05_08_2022/api.php" method="POST">
+        <label>Ingrese el numero 1</label>
+        <input type="text" name="num1" required pattern="[0123456789]+">
+        <label>Ingrese el numero 2</label>
+        <input type="text" name="num2" required pattern="[0123456789]+">
+        <div>
+            <input type="checkbox" name="operador" value="Igual"> <label>Igual</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Idéntico"> <label>Idéntico</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Diferente"> <label>Diferente</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="No Idéntico"> <label>No Idéntico</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Menor Que"> <label>Menor Que</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Mayor Que"> <label>Mayor Que</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Menor Igual Que"> <label>Menor Igual Que</label>
+        </div>
+        <div>
+            <input type="checkbox" name="operador" value="Mayor Igual Que"> <label>Mayor Igual Que</label>
+        </div>
+        <input type="submit" value="Enviar">
+    </form> 
+    <pre id="res"></pre>
 </body>
 </html>

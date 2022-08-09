@@ -4,12 +4,27 @@
 // datos por el JS Y resivirlos en el PHP,
 // realizar la operacion selecionada y visualizarlo
 // en el HTML5
-addEventListener("DOMContentLoaded", async(e)=>{
-    let config = {
-        method: "POST", 
-        body: JSON.stringify({num1: 20, num2: 20})
-    };
-    let peticion = await fetch("https://comfenalcocursos.000webhostapp.com/Actividad_Operadores_Comparacion_05_08_2022/api.php", config);
-    let data = await peticion.text();
-    document.querySelector("#res").innerHTML = data;
+addEventListener("DOMContentLoaded", (e)=>{
+    let form = document.querySelector("form");
+    form.addEventListener("submit", async(e)=>{
+        e.preventDefault();
+        
+        let checkboxInput = document.querySelectorAll("input[type='checkbox']");
+        let checkboxNames = [];
+        checkboxInput.forEach(res => checkboxNames.push(res.name));
+        checkboxInput = new Set(checkboxNames);
+        checkboxNames = [... checkboxInput];
+        let input = new FormData(e.target);
+        let json = Object.fromEntries(input.entries());
+        checkboxNames.forEach(res => json[res] = input.getAll(res));
+
+        let config = {
+            method: form.method, 
+            body: JSON.stringify(json)
+        };
+        let peticion = await fetch(form.action, config);
+        let data = await peticion.text();
+        document.querySelector("#res").innerHTML = data;
+    })
+    
 })
